@@ -13,8 +13,8 @@ const Modal = ({modalVisible, onHandleDelete, onHandleDismiss}) => {
           <Text>¿Estas seguro de eliminar?</Text>
         </View>
         <View style={styles.modalButton}>
-          <Button title="Confirmar" color={'#205953'} onPress={onHandleDelete} style={styles.button}/>
-          <Button title="Cancelar" color={'#FF0000'} onPress={onHandleDismiss} style={styles.button}/>
+          <Button title="Confirmar" color={'#2aa99f'} onPress={onHandleDelete} style={styles.button}/>
+          <Button title="Cancelar" color={'#858689'} onPress={onHandleDismiss} style={styles.button}/>
         </View>
       </View>
     </View>
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   modalContent: {
-    backgroundColor: '#ecf7f6',
+    backgroundColor: '#def1f1',
     borderRadius: 20,
     padding: 35,
     alignItems: 'center',
@@ -44,19 +44,18 @@ const styles = StyleSheet.create({
   modalTitle: {
     color: '#fff',
     fontSize: 18,
-    color: '#0d2421'
+    color: '#ffffff'
   },
   modalMessage: {
     marginBottom: 15,
     justifyContent: 'center',
     alignItems: 'center',
-
+    color: '#ffffff'
   },
   modalButton: {
     flexDirection: 'row',
     justifyContent: 'space-around',
     marginTop: 15,
-    color:'#205953',
   },
 button: {
   marginHorizontal: 5,

@@ -10,7 +10,7 @@ import {
 } from "react-native";
 
 import Modal from "./components/Modal";
-
+import Icon from 'react-native-vector-icons/FontAwesome'
 export default function App() {
   const [textValue, setTextValue] = useState('');
   const [itemsList, setItemList] = useState([]);
@@ -36,7 +36,8 @@ export default function App() {
       onPress={() => onHandleModal(index)}
       >
 
-      <Text style={styles.TextItem}>{item.value}</Text>
+      <Text style={styles.textItem}>{item.value}</Text>
+      <Text style={styles.buttonItem}><Icon name="trash" size={20} color='#ffffff' /></Text>
     </TouchableOpacity>
   );
 
@@ -69,7 +70,7 @@ export default function App() {
         />
         <Button 
         style={styles.buttonBar}
-        title="+ ADD" color={'#328e84'}
+        title="+ ADD" color={'#2aa99f'}
         onPress={addItem}
         />
       </View>
@@ -90,13 +91,13 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 30,
     paddingTop: 80,
-    backgroundColor: '#f9fdfd',
+    backgroundColor: '#ffffff',
   },
   title: {
     fontSize: 35,
     fontWeight: 'bold',
     marginBottom: 15,
-    color: '#787678',
+    color: '#505052',
   },
   inputContainer: {
   flexDirection: 'row', 
@@ -105,7 +106,7 @@ const styles = StyleSheet.create({
   borderRadius: 10,
   backgroundColor: '#fff',
   borderWidth: 1,
-  borderColor: '#205953',
+  borderColor: '#505052',
   justifyContent: 'space-between',
   },
   input: {
@@ -122,21 +123,29 @@ const styles = StyleSheet.create({
     marginVertical: 4,
     marginHorizontal: 5,
     borderRadius: 10,
-    justifyContent: 'center',
-    backgroundColor: '#3fb2a5',
-    shadowColor: '#3fb2a5',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    backgroundColor: '#2aa99f',
+    shadowColor: '#2aa99f',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.5,
     shadowRadius: 3,
     elevation: 5,
-    paddingLeft: 10
+    paddingLeft: 10,
+    flexDirection: 'row'
   },
   textItem: {
     fontSize: 20,
-    paddingLeft: 17,
-    color: '#e7edec',
+    paddingLeft: 5,
+    color: '#ffffff',
     fontWeight: '600',
     fontVariant: 'no-common-ligatures',
   },
+  buttonItem: {
+    paddingRight: 15,
+  },
+  buttonBar:{
+    height: 50,
+  }
 })
 
